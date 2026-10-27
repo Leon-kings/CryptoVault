@@ -13,8 +13,6 @@ import CheckIcon from "@mui/icons-material/Check";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import { MailOutlined } from "@mui/icons-material";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
@@ -248,13 +246,6 @@ export const Wallet = () => {
   const handleLogout = () => {
     localStorage.removeItem("cv_auth_user");
     navigate("/");
-  };
-
-  const toggleTheme = () => {
-    const newTheme = isLightMode ? "dark" : "light";
-    setIsLightMode(!isLightMode);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
   };
 
   const getInitials = (name: string) =>
@@ -822,7 +813,7 @@ export const Wallet = () => {
               <h2 className="font-bold text-white">Transaction History</h2>
             </div>
             <div className="divide-y divide-[#3A3A40]">
-              {transactions.map((tx, i) => (
+              {transactions.map((tx) => (
                 <div
                   key={tx.id}
                   className="p-4 flex items-center justify-between hover:bg-[#2C2C30] transition-colors"

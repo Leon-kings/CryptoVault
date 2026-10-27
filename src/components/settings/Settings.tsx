@@ -10,8 +10,6 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { MailOutlined } from "@mui/icons-material";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import EditIcon from "@mui/icons-material/Edit";
@@ -20,7 +18,6 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PersonIcon from "@mui/icons-material/Person";
 import SecurityIcon from "@mui/icons-material/Security";
 import TuneIcon from "@mui/icons-material/Tune";
@@ -190,12 +187,6 @@ export const Settings = () => {
     navigate("/");
   };
 
-  const toggleTheme = () => {
-    const newTheme = isLightMode ? "dark" : "light";
-    setIsLightMode(!isLightMode);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
 
   const getInitials = (name: string) =>
     name
@@ -793,14 +784,7 @@ export const Settings = () => {
                             Use dark theme for the interface
                           </p>
                         </div>
-                        <button
-                          onClick={toggleTheme}
-                          className={`w-11 h-6 rounded-full p-0.5 transition-colors ${isLightMode ? "bg-[#3A3A40]" : "bg-[#E8A87C]"}`}
-                        >
-                          <div
-                            className={`w-5 h-5 rounded-full bg-white shadow-md transition-transform ${isLightMode ? "translate-x-0" : "translate-x-5"}`}
-                          />
-                        </button>
+                      
                       </div>
                       <div className="py-4 flex items-center justify-between">
                         <div>

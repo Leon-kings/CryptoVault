@@ -11,8 +11,6 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { MailOutlined } from "@mui/icons-material";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import StarIcon from "@mui/icons-material/Star";
@@ -285,12 +283,6 @@ export const Markets = () => {
     navigate("/");
   };
 
-  const toggleTheme = () => {
-    const newTheme = isLightMode ? "dark" : "light";
-    setIsLightMode(!isLightMode);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  };
 
   const toggleFavorite = (symbol: string) => {
     setFavorites((prev) =>
