@@ -258,9 +258,6 @@ export const Markets = () => {
       navigate("/");
     }
 
-  
-  
-    document.documentElement.setAttribute("data-theme", savedTheme);
   }, [navigate]);
 
   // Click outside handlers
