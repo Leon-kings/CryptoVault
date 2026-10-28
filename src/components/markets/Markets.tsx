@@ -258,7 +258,7 @@ export const Markets = () => {
       navigate("/");
     }
 
-    const savedTheme = localStorage.getItem("theme") || "dark";
+  
   
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, [navigate]);

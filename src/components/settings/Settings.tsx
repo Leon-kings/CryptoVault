@@ -163,7 +163,7 @@ export const Settings = () => {
       navigate("/");
     }
 
-    const savedTheme = localStorage.getItem("theme") || "dark";
+  
    
   }, [navigate]);
 

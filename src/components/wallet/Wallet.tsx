@@ -224,7 +224,7 @@ export const Wallet = () => {
     } catch {
       navigate("/");
     }
-    const savedTheme = localStorage.getItem("theme") || "dark";
+    
    
   }, [navigate]);
 
