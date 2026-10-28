@@ -121,7 +121,7 @@ export const Settings = () => {
 
   // App State
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(false);
+
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
   const [activeTab, setActiveTab] = useState<SettingsTab>("profile");
@@ -164,7 +164,7 @@ export const Settings = () => {
     }
 
     const savedTheme = localStorage.getItem("theme") || "dark";
-    setIsLightMode(savedTheme === "light");
+   
   }, [navigate]);
 
   // Click outside handlers

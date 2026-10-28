@@ -238,7 +238,7 @@ export const Markets = () => {
 
   // UI States
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isLightMode, setIsLightMode] = useState(false);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [activeFilter, setActiveFilter] = useState("All");
   const [favorites, setFavorites] = useState<string[]>(["BTC", "ETH", "SOL"]);
@@ -259,7 +259,7 @@ export const Markets = () => {
     }
 
     const savedTheme = localStorage.getItem("theme") || "dark";
-    setIsLightMode(savedTheme === "light");
+  
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, [navigate]);
 
